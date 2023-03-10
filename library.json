@@ -1,0 +1,21 @@
+{
+  "name": "BQ51_thijs",
+  "version": "1.0.0",
+  "description": "A library for the TI bq51x2x Qi receivers for atmega328p, ESP32, MSP430 or STM32 (or Wire.h)",
+  "keywords": "BQ51, I2C",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/thijses/BQ51_thijs.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Thijs van Liempd",
+      "email": "tttthijses@gmail.com"
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": ["atmelavr", "espressif32", "timsp430", "ststm32"],
+  "headers": "BQ51_thijs.h"
+}

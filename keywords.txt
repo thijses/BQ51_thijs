@@ -1,0 +1,135 @@
+#######################################
+# Syntax Coloring Map For BQ51_thijs
+#######################################
+# Class (KEYWORD1)
+#######################################
+
+BQ51_thijs					KEYWORD1
+_BQ51_thijs_base		KEYWORD1
+
+BQ51_ILIM_ENUM					KEYWORD1
+BQ51_MAILBOX_ERR_ENUM		KEYWORD1
+BQ51_RS_FOD_ENUM				KEYWORD1
+
+BQ51_ERR_RETURN_TYPE						KEYWORD2
+BQ51_ERR_RETURN_TYPE_default		KEYWORD2
+
+#######################################
+# Class properties (LITERAL1)
+#######################################
+
+slaveAddress		LITERAL1
+isBQ51021				LITERAL1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################	
+
+BQ51debugPrint		KEYWORD2
+
+init							KEYWORD2
+requestReadBytes	KEYWORD2
+onlyReadBytes			KEYWORD2
+writeBytes				KEYWORD2
+
+_setBits		KEYWORD2
+_errGood		KEYWORD2
+
+setVO_REG											KEYWORD2
+setIO_REG											KEYWORD2
+setMAILBOX										KEYWORD2
+setMAILBOX_SEND								KEYWORD2
+setMAILBOX_ALIGN							KEYWORD2
+setFOD_RAM										KEYWORD2
+setFOD_ESR_EN									KEYWORD2
+setFOD_OFF_EN									KEYWORD2
+setFOD_RO											KEYWORD2
+setFOD_RS											KEYWORD2
+setUSER_HEADER								KEYWORD2
+setPACKET_PAYLOAD							KEYWORD2
+# setPACKET_PAYLOAD_uint32_t	KEYWORD2
+# setVOUT_STATUS_RAM					KEYWORD2
+# setREC_PWR_STATUS_RAM				KEYWORD2
+
+getVO_REG											KEYWORD2
+getVO_REG_volt								KEYWORD2
+getIO_REG											KEYWORD2
+getIO_REG_percent							KEYWORD2
+getMAILBOX										KEYWORD2
+getMAILBOX_SEND								KEYWORD2
+getMAILBOX_ERR								KEYWORD2
+getMAILBOX_ALIGN							KEYWORD2
+getFOD_RAM										KEYWORD2
+getFOD_ESR_EN									KEYWORD2
+getFOD_OFF_EN									KEYWORD2
+getFOD_RO											KEYWORD2
+getFOD_RO_mW									KEYWORD2
+getFOD_RS											KEYWORD2
+getFOD_RS_mult								KEYWORD2
+getUSER_HEADER								KEYWORD2
+getVRECT											KEYWORD2
+getVRECT_volt									KEYWORD2
+getVOUT												KEYWORD2
+getVOUT_volt									KEYWORD2
+getREC_PWR										KEYWORD2
+getREC_PWR_watt								KEYWORD2
+getMODE_IND										KEYWORD2
+getMODE_IND_ALIGN							KEYWORD2
+getMODE												KEYWORD2
+getPACKET_PAYLOAD							KEYWORD2
+# getPACKET_PAYLOAD_uint32_t	KEYWORD2
+getRXID												KEYWORD2
+
+
+
+connectionCheck			KEYWORD2
+poweredCheck				KEYWORD2
+# printConfig				KEYWORD2
+resetVO_REG					KEYWORD2
+resetIO_REG					KEYWORD2
+resetMAILBOX				KEYWORD2
+resetAllRegisters		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+BQ51_return_esp_err_t				LITERAL1
+BQ51_return_i2c_status_e		LITERAL1
+
+BQ51_VO_REG									LITERAL1
+BQ51_IO_REG									LITERAL1
+
+BQ51_MAILBOX								LITERAL1
+BQ51_FOD_RAM								LITERAL1
+BQ51_USER_HEADER_RAM				LITERAL1
+BQ51_VRECT_STATUS_RAM				LITERAL1
+BQ51_VOUT_STATUS_RAM				LITERAL1
+BQ51_REC_PWR_STATUS_RAM			LITERAL1
+BQ51_MODE_IND								LITERAL1
+BQ51_PACKET_PAYLOAD					LITERAL1
+# BQ51_PACKET_PAYLOAD_0			LITERAL1
+BQ51_RXID_READBACK					LITERAL1
+
+BQ51_VO_REG_bits						LITERAL1
+BQ51_IO_REG_bits						LITERAL1
+BQ51_MAILBOX_SEND_bits			LITERAL1
+BQ51_MAILBOX_ERR_bits				LITERAL1
+BQ51_MAILBOX_ALIGN_bits			LITERAL1
+# BQ51_MAILBOX_FOD_S_bits		LITERAL1
+BQ51_FOD_RAM_ESR_EN_bits		LITERAL1
+BQ51_FOD_RAM_OFF_EN_bits		LITERAL1
+BQ51_FOD_RAM_RO_bits				LITERAL1
+BQ51_FOD_RAM_RS_bits				LITERAL1
+BQ51_MODE_IND_ALIGN_bits		LITERAL1
+BQ51_MODE_IND_MODE_bits			LITERAL1
+
+BQ51_VO_REG_default					LITERAL1
+BQ51_IO_REG_default					LITERAL1
+BQ51_MAILBOX_default				LITERAL1
+
+BQ51_RXID_size							LITERAL1
+BQ51_VOLT_SCALAR						LITERAL1
+BQ51_WATT_SCALAR						LITERAL1
+
+
