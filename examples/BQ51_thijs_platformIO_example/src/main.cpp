@@ -68,8 +68,8 @@ void setup()
     // not sure if STM32 needs pinMode setting for I2C
     BQ51.init(100000, SDA, SCL, false); // TODO: test what the limits of this poor microcontroller are ;)
     /* NOTE: for initializing multiple devices, the code should look roughly like this:
-      i2c_t* sharedBus = sensor.init(100000, SDA, SCL, false); // returns sensor._i2c (which is (currently) also just a public member, btw)
-      secondSensor.init(sharedBus); // pass the i2c_t object (pointer) to the second device, to avoid re-initialization of the i2c peripheral
+      i2c_t* sharedBus = BQ51.init(100000, SDA, SCL, false); // returns BQ51._i2c (which is (currently) also just a public member, btw)
+      secondBQ51.init(sharedBus); // pass the i2c_t object (pointer) to the second device, to avoid re-initialization of the i2c peripheral
       //// repeated initialization of the same i2c peripheral will result in unexplained errors or silent crashes (during the first read/write action)!
     */
   #else
