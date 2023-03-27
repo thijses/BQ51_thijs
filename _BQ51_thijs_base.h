@@ -72,7 +72,7 @@ class _BQ51_thijs_base
 {
   public:
   //// I2C constants:
-  const uint8_t slaveAddress = 0x6C; //7-bit address
+  static const uint8_t slaveAddress = 0x6C; //7-bit address
   const bool isBQ51021; // (BQ5122x or BQ51021) the BQ51021 only lacks 2 functions, but still
   _BQ51_thijs_base(bool isBQ51021=false) : isBQ51021(isBQ51021) {}
   
