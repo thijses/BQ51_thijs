@@ -522,7 +522,7 @@ class BQ51_thijs : public _BQ51_thijs_base
   }
 
   /**
-   * Attempts to check whether V_RECT > V_UVLO (which should mean a TX is providing power). This also checks whether RXID is all 1's, to see if those registers are active
+   * Attempts to check whether RXID is all 1's, to see if those registers are active. This also checks whether V_RECT > V_UVLO (which should mean a TX is providing power)
    * @return V_RECT as a float, because why not (but use getV_RECT() for a much faster version)
    */
   float poweredCheck() {
@@ -533,7 +533,8 @@ class BQ51_thijs : public _BQ51_thijs_base
     if(allOnes) { return(-1.0); } // if the RXID read as all 1's, then those registers are likely reset/unpowered, because V_RECT < V_UVLO
     err = requestReadBytes(BQ51_VRECT_STATUS_RAM, readBuff, 1);
     if(!_errGood(err)) { return(-2.0); } // there is no good reason for the I2C interaction to fail on the second read, but might as well check
-    // const static uint8_t UVLO = 
+    const static uint8_t UVLO = 2.9 / BQ51_VOLT_SCALAR; // the UnderVoltage LockOut is max 2.9V, according to the TI BQ51222 datasheet
+    if(readBuff[0] < UVLO) { return(-1.0); } // if the rectifier voltage read is below UVLO, it should not be on
     return(readBuff[0] * BQ51_VOLT_SCALAR);
   }
 
